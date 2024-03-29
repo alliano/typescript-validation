@@ -14,6 +14,9 @@ npm install babel-jest @babel/preset-env --save-dev
 ``` sh
 npm install typescript --save-dev
 ```
+``` sh
+npm install zod
+```
 
 ``` sh
 tsc --init

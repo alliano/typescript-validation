@@ -5,9 +5,6 @@ describe('Custom Validation', function(): void {
     test('Should support custom validation', function(): void {
         const userSchema: ZodObject<any> = z.object({
             id: z.coerce.number(),
-            /**
-             * melakukan custom validation dengan mengguinakan RefinameCtx
-             */
             name: z.coerce.string().transform((data: string, refinameCtx: RefinementCtx) => {
                 if(data !== data.toLocaleLowerCase()) {
                     refinameCtx.addIssue({
